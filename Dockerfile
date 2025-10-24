@@ -18,4 +18,4 @@ COPY . /app
 # Sync the project
 RUN uv sync --frozen
 
-CMD ["uv", "run", "python", "my_bindu_agent/main.py"]
+CMD ["uv", "run", "python", "-m", "my_bindu_agent.main"]

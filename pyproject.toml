@@ -10,6 +10,7 @@ dependencies = [
     "bindu==0.3.18",
     "agno>=2.2.0",
     "openinference-instrumentation-agno==0.1.19",
+    "requests>=2.31.0",
 ]
 classifiers = [
     "Intended Audience :: Developers",
@@ -109,4 +110,3 @@ skip_empty = true
 [tool.coverage.run]
 branch = true
 source = ["my_bindu_agent"]
-
