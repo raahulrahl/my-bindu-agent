@@ -1,15 +1,25 @@
-# my-bindu-agent
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saptha-me/create-bindu-agent/refs/heads/main/assets/light.svg" alt="bindu Logo" width="200">
+</p>
 
-[![Release](https://img.shields.io/github/v/release/your_github_handle/my-bindu-agent)](https://img.shields.io/github/v/release/your_github_handle/my-bindu-agent)
-[![Build status](https://img.shields.io/github/actions/workflow/status/your_github_handle/my-bindu-agent/main.yml?branch=main)](https://github.com/your_github_handle/my-bindu-agent/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/your_github_handle/my-bindu-agent/branch/main/graph/badge.svg)](https://codecov.io/gh/your_github_handle/my-bindu-agent)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/your_github_handle/my-bindu-agent)](https://img.shields.io/github/commit-activity/m/your_github_handle/my-bindu-agent)
-[![License](https://img.shields.io/github/license/your_github_handle/my-bindu-agent)](https://img.shields.io/github/license/your_github_handle/my-bindu-agent)
+<h1 align="center"> my-bindu-agent 🌻</h1>
+
+<br/>
+
+[![Build status](https://img.shields.io/github/actions/workflow/status/raahulrahl/my-bindu-agent/main.yml?branch=main)](https://github.com/raahulrahl/my-bindu-agent/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/raahulrahl/my-bindu-agent/branch/main/graph/badge.svg)](https://codecov.io/gh/raahulrahl/my-bindu-agent)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/raahulrahl/my-bindu-agent)](https://img.shields.io/github/commit-activity/m/raahulrahl/my-bindu-agent)
+[![License](https://img.shields.io/github/license/raahulrahl/my-bindu-agent)](https://img.shields.io/github/license/raahulrahl/my-bindu-agent)
+
+<br/>
 
 A Bindu AI agent for intelligent task handling
 
-- **Github repository**: <https://github.com/your_github_handle/my-bindu-agent/>
-- **Documentation** <https://your_github_handle.github.io/my-bindu-agent/>
+- **Github repository**: <https://github.com/raahulrahl/my-bindu-agent/>
+- **Documentation**: <https://raahulrahl.github.io/my-bindu-agent/>
+
+<br/>
+
 
 ## Getting started with your project
 
@@ -56,10 +66,40 @@ git push origin main
 You are now ready to start development on your project!
 The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release.
 
-To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
-For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
-To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
 
----
+<br/>
 
-Repository initiated with [fpgmaas/cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv).
+# From Zero to Production-Ready Agent in 2 Minutes
+
+**[Create Bindu Agent](https://github.com/Saptha-me/create-bindu-agent/tree/main)** is the fastest way to build production-ready AI agents that speak the language of the Internet of Agents. No boilerplate. No configuration hell. Just configure and get a fully deployable agent that communicates using **A2A**, **AP2**, and **X402** protocols.
+
+<br/>
+
+## Quickstart
+
+**Time to first agent: ~2 minutes** ⏱️
+
+On your local machine, navigate to the directory in which you want to
+create a project directory, and run the following command:
+
+```bash
+uvx cookiecutter https://github.com/Saptha-me/create-bindu-agent.git
+```
+
+<br/>
+
+<p align="center">
+  <strong>Built with 💛 by the team from Amsterdam 🌷</strong><br/>
+  <em>Happy Bindu! 🌻🚀✨</em>
+</p>
+
+<p align="center">
+  <strong>From idea to Internet of Agents in 2 minutes.</strong><br/>
+  <em>Your agent. Your framework. Universal protocols.</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Saptha-me/create-bindu-agent">⭐ Star us on GitHub</a> •
+  <a href="https://discord.gg/3w5zuYUuwt">💬 Join Discord</a> •
+  <a href="https://docs.saptha.me">📚 Read the Docs</a>
+</p>
