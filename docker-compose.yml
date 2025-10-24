@@ -1,0 +1,61 @@
+services:
+  my_bindu_agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my_bindu_agent
+    ports:
+      - "3773:3773"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://phoenix:4317
+      
+
+    env_file:
+      - .env
+    volumes:
+      - ./my_bindu_agent:/app/my_bindu_agent
+      - ./agent_config.json:/app/agent_config.json
+    restart: unless-stopped
+    networks:
+      - my_bindu_agent-network
+    depends_on:
+      - jaeger
+      - phoenix
+      
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: my_bindu_agent-jaeger
+    ports:
+      - "16686:16686"  # Jaeger UI
+      - "4318:4318"    # OTLP HTTP receiver
+      - "4317:4317"    # OTLP gRPC receiver
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    networks:
+      - my_bindu_agent-network
+    restart: unless-stopped
+
+
+  phoenix:
+    image: arizephoenix/phoenix:latest
+    container_name: my_bindu_agent-phoenix
+    ports:
+      - "6006:6006"  # Phoenix UI and OTLP HTTP collector
+      - "4319:4317"  # OTLP gRPC collector
+    environment:
+      - PHOENIX_WORKING_DIR=/mnt/data
+    volumes:
+      - phoenix_data:/mnt/data
+    networks:
+      - my_bindu_agent-network
+    restart: unless-stopped
+
+networks:
+  my_bindu_agent-network:
+    driver: bridge
+
+volumes:
+  phoenix_data:
+    driver: local
+
