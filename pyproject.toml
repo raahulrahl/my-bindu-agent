@@ -11,6 +11,8 @@ dependencies = [
     "agno>=2.2.0",
     "openinference-instrumentation-agno==0.1.19",
     "requests>=2.31.0",
+    "pyperclip>=1.8.0",
+    "rich>=13.0.0",
 ]
 classifiers = [
     "Intended Audience :: Developers",
@@ -37,6 +39,7 @@ dev = [
     "mkdocs>=1.4.2",
     "mkdocs-material>=8.5.10",
     "mkdocstrings[python]>=0.26.1",
+    "types-requests>=2.31.0",
 ]
 
 [build-system]
@@ -110,3 +113,7 @@ skip_empty = true
 [tool.coverage.run]
 branch = true
 source = ["my_bindu_agent"]
+
+[tool.deptry]
+ignore = ["DEP002"]
+extend_exclude = ["get_auth0_token\\.py"]
