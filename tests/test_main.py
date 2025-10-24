@@ -1,10 +1,19 @@
+from unittest.mock import MagicMock, patch
+
 from my_bindu_agent.main import handler
 
 
 def test_handler():
     """Test that handler accepts messages and returns a RunOutput."""
     messages = [{"role": "user", "content": "Hello, how are you?"}]
-    result = handler(messages)
+
+    # Mock the agent.run response
+    mock_response = MagicMock()
+    mock_response.run_id = "test-run-id"
+    mock_response.status = "COMPLETED"
+
+    with patch("my_bindu_agent.main.agent.run", return_value=mock_response):
+        result = handler(messages)
 
     # Check that we get a result back
     assert result is not None
@@ -12,3 +21,5 @@ def test_handler():
     # Check that the result has expected attributes from agno RunOutput
     assert hasattr(result, "run_id")
     assert hasattr(result, "status")
+    assert result.run_id == "test-run-id"
+    assert result.status == "COMPLETED"
